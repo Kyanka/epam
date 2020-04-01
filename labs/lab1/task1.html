@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Task1</title>
+    <meta name="description" content="task1" />
+    <meta name="Kyanka" content="Katrin" />
+
+    <style>
+      header, footer {
+        border:1px black solid;
+      }
+      aside {
+        background: #f0f0f0;
+        padding: 10px;
+        width: 200px;
+        float: right;
+      }
+      article {
+        margin-right: 240px;
+        display: block;
+      }
+      div {
+        border: 1px black solid;
+      }
+      #smile {
+        border: 1px white solid;
+      }
+      mark{
+        border: 1px green dashed;
+        background-color:blue;
+      }
+      wbr { display: inline-block; }
+    </style>
+    <script>
+      window.onload = function() {
+        var drawingCanvas = document.getElementById("smile");
+        if (drawingCanvas && drawingCanvas.getContext) {
+          var context = drawingCanvas.getContext("2d");
+          // Рисуем окружность
+          context.strokeStyle = "#000";
+          context.fillStyle = "#fc0";
+          context.beginPath();
+          context.arc(100, 100, 50, 0, Math.PI * 2, true);
+          context.closePath();
+          context.stroke();
+          context.fill();
+          // Рисуем левый глаз
+          context.fillStyle = "#fff";
+          context.beginPath();
+          context.arc(84, 90, 8, 0, Math.PI * 2, true);
+          context.closePath();
+          context.stroke();
+          context.fill();
+          // Рисуем правый глаз
+          context.beginPath();
+          context.arc(116, 90, 8, 0, Math.PI * 2, true);
+          context.closePath();
+          context.stroke();
+          context.fill();
+          // Рисуем рот
+          context.beginPath();
+          context.moveTo(70, 115);
+          context.quadraticCurveTo(100, 130, 130, 115);
+          context.quadraticCurveTo(100, 150, 70, 115);
+          context.closePath();
+          context.stroke();
+          context.fill();
+        }
+      };
+
+    function edit() { 
+    document.getElementById('text').style.display = 'none'; 
+    document.getElementById('edit').style.display = 'block'; 
+    document.getElementById('edit').value = document.getElementById('text').innerHTML; 
+    document.getElementById('edit').focus(); 
+   } 
+   function text() { 
+    document.getElementById('text').innerHTML = document.getElementById('edit').value; 
+    document.getElementById('edit').style.display = 'none'; 
+    document.getElementById('text').style.display = 'block'; 
+   } 
+   var root = elem.createShadowRoot();
+  root.appendChild(tmpl.content.cloneNode(true));
+
+   
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <h2>This is header with nav</h2>
+      <nav><a href="task2.html">Task2</a>|<a href ="task3.html">Task3</a> |
+        <a href="task4.html">Task4</a>|<a href="task5.html">Task5</a>|<a href="task6.html">Task6</a></nav>
+    </header>
+    <h2>This is main with content</h2>
+    <main>
+    <aside>
+      <h2>This is aside</h2>
+      <p>Lorem ipsum</p>
+    </aside>
+
+    <article>
+      <h2>This is article with mark and wbr</h2>
+      Lorem <mark>ipsumdolorsitametconsecteturelit<wbr>seddoeiusmodtemporincididuntutl<wbr>aboreetdoloremagnaaliqua</mark>
+      Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum
+    </article>
+
+    <h2>This is audio</h2>
+    <audio controls src="file/Save your tears.mp3"></audio>
+
+    <h2>This is bdi</h2>
+    <p dir="ltr"><bdi>שבת</bdi> — суббота</p>
+
+    <h2>This is canvas</h2>
+    <canvas id="smile" width="200" height="200">
+      <p>Ваш браузер не поддерживает рисование.</p>
+    </canvas>
+
+
+    <p>
+      <h2>This is input with datalist and option</h2>
+      <input list="Lorem" />
+      <datalist id="Lorem">
+        <option value="Lorem"></option>
+        <option value="ipsum"></option>
+        <option value="dolor"></option>
+      </datalist>
+    </p>
+
+    <h2>This is details with summary</h2>
+    <details alt="Lorem"><summary>Info</summary>Hi,its info</details>
+
+    
+    <dialog open>
+    <h2>This is open dialog</h2>
+    </dialog>
+
+    <h2>This is embed</h2>
+    <embed width="250" height="250" src="https://www.youtube.com/embed/GpYgpKKLp-0"  allowfullscreen></embed>
+
+    <h2>This is figure with figcaption</h2>
+    <figure>
+      <p><img src="https://cdn.playbuzz.com/cdn/ba287fe9-eb6e-438e-8fad-9c930d823c46/fcb25ea9-922a-46ae-85ef-a728c06c5595.jpg" alt=""></p>
+      <figcaption>Naruto</figcaption>
+    </figure>
+
+    <h2>This is form and menu with menuitem </h2>
+    <p id="text" contextmenu="menu">Some text</p> 
+    <form onsubmit="text(); return false"><input id="edit"></form>
+
+     <menu type="context" id="menu">
+      <menuitem icon="image/edit.png" onclick="edit()" label="To Lorem"></menuitem>
+     </menu> 
+
+     <h2>This is meter</h2>
+     <meter value="70" max="100" low="10" high="80" >Уровень моей офигенности</meter>
+
+     <h2>This is form with input and output</h2>
+     <form oninput="result.value=(cm.value/2.54).toFixed(2)">
+      <p>Введите длину в сантиметрах: 
+      <input type="number" name="cm" autofocus></p>
+      <p>Длина в дюймах: <output name="result">0</output></p>
+    </form>
+
+    <h2>This is picture</h2>
+    <picture>
+        <source srcset="https://cdn.playbuzz.com/cdn/ba287fe9-eb6e-438e-8fad-9c930d823c46/fcb25ea9-922a-46ae-85ef-a728c06c5595.jpg">
+        <img src="https://cdn.playbuzz.com/cdn/ba287fe9-eb6e-438e-8fad-9c930d823c46/fcb25ea9-922a-46ae-85ef-a728c06c5595.jpg" width="124" height="124" alt="Naruto">
+    </picture> 
+
+    <h2>This is progress</h2>
+    <progress max="100" value="25">
+        Загружено на <span id="value">25</span>%
+    </progress>
+
+    <h2>This is section</h2>
+    <section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet error rerum non vitae eius enim consequuntur voluptates laborum iusto, accusamus nesciunt autem ut, dolorem totam hic reiciendis! Sed, sit nobis.</p>
+    </section>
+
+       
+        
+        <h2>This is p with time</h2>
+        <p><time>1957-10-04</time> запущен первый искусственный спутник Земли.</p>
+
+    <h2>This is video with track</h2>
+    <video width="560" height="430" controls>
+        <source src="file/video.mp4" type="video/mp4">
+        <track src="file/captions.sbv" kind="subtitles" srclang="ru" label="Russian">
+    </video>
+    
+    </main>
+    <h2>This is template</h2>
+    <template id="mytemplate">
+        <img src="" alt="image">
+      </template>
+     <script>
+       var t = document.querySelector('#mytemplate');
+// Populate the src at runtime.
+t.content.querySelector('img').src = 'file/kurama.jpeg';
+
+var clone = document.importNode(t.content, true);
+document.body.appendChild(clone);
+     </script>
+    <footer>
+      <h2>This is footer</h2> 
+    </footer>
+  </body>
+</html>

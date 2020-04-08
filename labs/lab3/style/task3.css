@@ -1,0 +1,39 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #f7f9fa;
+}
+
+main {
+    margin: auto;
+    min-height: 33%;
+    width: 33%;
+    padding: 20px;
+    border: 2px solid #d7d9da;
+    background-color: #ffffff;
+}
+
+#bottles {
+    width: 90%;
+}
+
+main > button {
+    width: 10%;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#list {
+    width: 100%;
+    min-height: 60px;
+    border: 2px solid #d7d9da;
+    background-color: #ffffff;
+}

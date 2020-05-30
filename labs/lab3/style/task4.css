@@ -1,0 +1,35 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #ffd530;
+}
+
+main {
+    margin: auto;
+    max-width: 20%;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0 20px 0;
+    border: 3px solid #ddb310;
+    background-color: #ffe641;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+th, td {
+    border: 2px solid #ddb310;
+    width: 100px;
+}
+
+#result {
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    border: 3px solid #ddb310;
+    background-color: #ffe641;
+}

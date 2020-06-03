@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Task 1</title>
+</head>
+<body>
+    <form action="https://google.com" method="POST" id="form">
+        <h2 class="form-section-header">Введіть дані для відправки:</h2>
+        <div class="form-group">
+            <p>E-mail:</p>
+            <input name="email" data-name="email" class="form-control" placeholder="Введіть e-mail...">
+        </div>
+        <div class="form-group">
+            <p>Ім'я:</p>
+            <input name="name" data-name="name" class="form-control" placeholder="Введіть ім'я...">
+        </div>
+        <div class="form-group">
+            <p>Повідомлення:</p>
+            <textarea name="message" data-name="message" class="form-control" placeholder="Введіть повідомлення..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Надіслати</button>
+        <p id="state"></p>
+        <div class="loader">
+            <div class="loader-wrapper">
+                <div class="loader-inner">
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

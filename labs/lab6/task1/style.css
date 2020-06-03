@@ -1,0 +1,65 @@
+body { 
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#form {
+    margin: auto;
+    min-width: 300px;
+    width: 25%;
+}
+
+.form-group > p {
+    margin: 0;
+}
+
+#state {
+    margin-top: 10px;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.error {
+    margin: 0;
+    color: red;
+}
+
+.loader {
+    display: none;
+}
+
+.loader-wrapper {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.loader-inner {
+    animation: rot 2s infinite ease-in-out;
+    margin: auto;
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border-top: 4px solid lightgray;
+    border-bottom: 4px solid lightgray;
+    border-left: 4px solid white;
+    border-right: 4px solid white;
+}
+
+@keyframes rot {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

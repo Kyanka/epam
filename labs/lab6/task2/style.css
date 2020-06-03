@@ -1,0 +1,15 @@
+.table {
+    border: 1px solid gainsboro;
+    width: 60%;
+    margin: 30px auto;
+}
+
+th, td {
+    text-align: center;
+    width: 25%;
+}
+
+#loader {
+    width: 100%;
+    text-align: center;
+}

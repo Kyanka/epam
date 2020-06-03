@@ -1,0 +1,102 @@
+body {
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+}
+
+.main {
+    width: 100%;
+    margin: auto;
+}
+
+.table {
+    border: 1px solid gainsboro;
+} 
+
+.btn-delete {
+    border: 1px solid #9090ff;
+    color: #9090ff;
+}
+
+th, td {
+    width: 33%;
+    text-align: center;
+}
+
+.input-group-prepend {
+    min-width: 50%;
+}
+
+.input-group-text {
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group:last-child {
+    margin-bottom: 0;
+}
+
+.diagram-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 16px;
+    height: 300px;
+    width: 100%;
+    border: 1px solid #333333;
+    border-bottom: 30px solid #333333;
+    background-color: gainsboro;
+}
+
+.incorrect-diagram {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #ff3030;
+    background-color: #ff8080;
+    text-align: center;
+}
+
+.incorrect-diagram > p {
+    padding: 20px;
+    margin: auto;
+    font-size: 60px;
+    font-weight: 700;
+    border: 6px dashed #ff3030;
+    border-radius: 30px;
+}
+
+.diagram-column {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: flex-start;
+    color: #ffffff;
+    font-weight: 600;
+    margin-right: 5px;
+    width: 100%;
+    bottom: 0;
+    max-height: 300px;
+    background: rgba(58,53,135,1);
+    border: 1px solid #333333;
+}
+
+.diagram-column > p {
+    margin: auto;
+    position: absolute;
+    bottom: -28px;
+}
+
+.diagram-column:hover {
+    transition: background 0.3s;
+    background:  rgba(147,196,147,1);
+}
+
+.diagram-column:last-child {
+    margin-right: 0;
+}

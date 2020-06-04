@@ -1,0 +1,28 @@
+body {
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+}
+
+.input-group-prepend {
+    min-width: 30%;
+}
+
+.input-group-text {
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group:last-child {
+    margin-bottom: 0;
+}
+
+.img-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
